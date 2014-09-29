@@ -36,17 +36,13 @@ def doData():
 def doConfig():
 
     print "graph_title MongoDB documents count"
-    print "graph_args --base 1000 -l 0"
-    print "graph_vlabel documents count"
+    print "graph_args --base 1000 -l 0 --vertical-label Docs"
     print "graph_category MongoDB"
 
     ss = getDatabasesStats()
     for k,v in ss.iteritems():
         for a,b in v.iteritems():
             print str(k)+str(a) + ".label " + str(k) + " " + str(a)
-            print str(k)+str(a) + ".min 0"
-            print str(k)+str(a) + ".type COUNTER"
-            print str(k)+str(a) + ".max 500000"
             print str(k)+str(a) + ".draw LINE1"
 
 if __name__ == "__main__":
