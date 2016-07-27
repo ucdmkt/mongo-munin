@@ -16,16 +16,30 @@ Requirements
 * MongoDB 2.4+
 * python/pymongo
 
-Installation (ubuntu)
-------------
 
-**Install pymongo:**
+## Install Requirements (choose one)
+
+#### Ubuntu
+
+Install pymongo:
 
     sudo apt-get install pip
     sudo apt-get install build-essential python-dev
     sudo pip install pymongo
 
-**Install plugins**
+
+#### Red Hat and Cent OS
+
+Enable the EPEL Repository:
+
+    sudo yum -y install epel-release
+    
+Install pymongo:
+
+    sudo yum install pymongo
+
+
+## Install plugins
 
     git clone https://github.com/comerford/mongo-munin.git /tmp/mongo-munin
     sudo cp /tmp/mongo-munin/mongo_* /usr/share/munin/plugins
@@ -46,8 +60,8 @@ Test plugin output:
 
     munin-run mongo_ops
 
-Configuration
------------
+### Configuration
+
 
 **how to configure custom db connection**
 
