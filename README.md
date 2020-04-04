@@ -49,6 +49,8 @@ Install pymongo:
     sudo ln -sf /usr/share/munin/plugins/mongo_mem /etc/munin/plugins/mongo_mem
     sudo ln -sf /usr/share/munin/plugins/mongo_ops /etc/munin/plugins/mongo_ops
     sudo ln -sf /usr/share/munin/plugins/mongo_docs /etc/munin/plugins/mongo_docs
+    sudo ln -sf /usr/share/munin/plugins/mongo_collections /etc/munin/plugins/mongo_collections
+    sudo ln -sf /usr/share/munin/plugins/mongo_page_faults /etc/munin/plugins/mongo_page_faults    
     sudo chmod +x /usr/share/munin/plugins/mongo_*
     sudo service munin-node restart
 
