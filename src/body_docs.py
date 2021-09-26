@@ -31,6 +31,7 @@ def doConfig():
     print("graph_category MongoDB")
 
     ss = getDatabasesStats()
+    import six
     for k,v in six.iteritems(ss):
         for a,b in six.iteritems(v):
             print(str(k)+str(a) + ".label " + str(k) + " " + str(a))
