@@ -27,11 +27,11 @@ def doData():
     need_multigraph()
     data = list(collections(True))
 
-    print "multigraph collection_count"
+    print("multigraph collection_count")
     for name, stats in data:
         print(escape_field(name) + ".value " + str(stats["count"]))
 
-    print "multigraph collection_size"
+    print("multigraph collection_size")
     for name, stats in data:
         print(escape_field(name) + ".value " + str(stats["size"]))
 
@@ -40,30 +40,30 @@ def doConfig():
     need_multigraph()
     names = list(collections())
 
-    print "multigraph collection_count"
-    print "graph_title MongoDB collection document count"
-    print "graph_args --base 1000 -l 0"
-    print "graph_vlabel collection document count"
-    print "graph_category MongoDB"
-    print "graph_total total"
+    print("multigraph collection_count")
+    print("graph_title MongoDB collection document count")
+    print("graph_args --base 1000 -l 0")
+    print("graph_vlabel collection document count")
+    print("graph_category MongoDB")
+    print("graph_total total")
 
     for name in names:
         field_name = escape_field(name)
-        print field_name + ".label " + name
-        print field_name + ".min 0"
-        print field_name + ".type GAUGE"
-        print field_name + ".draw LINE1"
+        print(field_name + ".label " + name)
+        print(field_name + ".min 0")
+        print(field_name + ".type GAUGE")
+        print(field_name + ".draw LINE1")
 
-    print "multigraph collection_size"
-    print "graph_title MongoDB collection size"
-    print "graph_args --base 1024 -l 0"
-    print "graph_vlabel collection size"
-    print "graph_category MongoDB"
-    print "graph_total total"
+    print("multigraph collection_size")
+    print("graph_title MongoDB collection size")
+    print("graph_args --base 1024 -l 0")
+    print("graph_vlabel collection size")
+    print("graph_category MongoDB")
+    print("graph_total total")
 
     for name in names:
         field_name = escape_field(name)
-        print field_name + ".label " + name
-        print field_name + ".min 0"
-        print field_name + ".type GAUGE"
-        print field_name + ".draw LINE1"
+        print(field_name + ".label " + name)
+        print(field_name + ".min 0")
+        print(field_name + ".type GAUGE")
+        print(field_name + ".draw LINE1")
