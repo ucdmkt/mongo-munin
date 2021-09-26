@@ -1,23 +1,3 @@
-#!/usr/bin/env python
-
-## GENERATED FILE - DO NOT EDIT
-
-import sys
-import os  
-import pymongo
-
-
-def getClient():
-    if 'MONGO_DB_URI' in os.environ:
-        return pymongo.MongoClient(os.environ['MONGO_DB_URI'])
-    else:
-        return pymongo.MongoClient()
-
-
-def getServerStatus():
-    c = getClient()
-    return c.admin.command('serverStatus', workingSet=True)
-
 
 def getDatabasesStats():
     c = getClient()
@@ -55,20 +35,3 @@ def doConfig():
         for a,b in six.iteritems(v):
             print(str(k)+str(a) + ".label " + str(k) + " " + str(a))
             print(str(k)+str(a) + ".draw LINE1")
-
-if __name__ == "__main__":          
-	
-    from os import environ
-    if 'HOST' in environ:
-        host = environ['HOST']
-    if 'PORT' in environ:
-        port = environ['PORT']
-    if 'USER' in environ:
-        user = environ['USER']
-    if 'PASSWORD' in environ:
-        password = environ['PASSWORD']
-    
-if len(sys.argv) > 1 and sys.argv[1] == "config":
-    doConfig()
-else:
-    doData()

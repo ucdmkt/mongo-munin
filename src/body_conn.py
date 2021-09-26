@@ -13,8 +13,3 @@ def doConfig():
     print("graph_category MongoDB")
 
     print(name + ".label " + name)
-
-
-
-
-
