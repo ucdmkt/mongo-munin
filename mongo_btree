@@ -18,6 +18,7 @@ def getServerStatus():
     c = getClient()
     return c.admin.command('serverStatus', workingSet=True)
 
+
 def get():
     return getServerStatus()["indexCounters"]
 
@@ -39,6 +40,7 @@ def doConfig():
         print(k + ".type COUNTER")
         print(k + ".max 500000")
         print(k + ".draw LINE1")
+
 if __name__ == "__main__":          
 	
     from os import environ

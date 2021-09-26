@@ -14,3 +14,4 @@ def getClient():
 def getServerStatus():
     c = getClient()
     return c.admin.command('serverStatus', workingSet=True)
+

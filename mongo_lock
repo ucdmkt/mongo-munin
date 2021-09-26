@@ -18,6 +18,7 @@ def getServerStatus():
     c = getClient()
     return c.admin.command('serverStatus', workingSet=True)
 
+
 name = "locked"
 
 def doData():
@@ -31,11 +32,6 @@ def doConfig():
     print("graph_category MongoDB")
 
     print (name + ".label " + name)
-
-
-
-
-
 
 if __name__ == "__main__":          
 	

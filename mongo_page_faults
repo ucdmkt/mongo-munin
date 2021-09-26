@@ -18,6 +18,7 @@ def getServerStatus():
     c = getClient()
     return c.admin.command('serverStatus', workingSet=True)
 
+
 name = "page_faults"
 
 def get():

@@ -18,6 +18,7 @@ def getServerStatus():
     c = getClient()
     return c.admin.command('serverStatus', workingSet=True)
 
+
 def ok(s):
     return s == "resident" or s == "virtual" or s == "mapped"
 
@@ -37,12 +38,6 @@ def doConfig():
         if ok( k ):
             print(k + ".label " + k)
             print(k + ".draw LINE1")
-
-
-
-
-
-
 
 if __name__ == "__main__":          
 	

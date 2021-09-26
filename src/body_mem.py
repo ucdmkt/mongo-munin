@@ -18,9 +18,3 @@ def doConfig():
         if ok( k ):
             print(k + ".label " + k)
             print(k + ".draw LINE1")
-
-
-
-
-
-
